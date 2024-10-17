@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
 
 const Search = (props) => {
 
@@ -35,7 +36,7 @@ const Search = (props) => {
   return (
     <div>
       <input type="text" value={searchTerm} onChange={handleChange} />
-      <button onClick={handleClick}>Search</button>
+      <Button onClick={handleClick}>Search</Button>
     </div>
   );
 }

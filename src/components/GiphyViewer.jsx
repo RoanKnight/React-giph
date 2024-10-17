@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import Search from './Search';
+import Random from './Random';
+import Trending from './Trending';
+import DropdownMenu from './Dropdown';
 
 const GiphCard = (props) => {
 
@@ -40,9 +43,12 @@ const GiphyViewer = () => {
   return (
 
     <div>
-
-      <Search setGifs={setGifs}/>
-
+      <Row md={2}>
+        <Search setGifs={setGifs} />
+        <Random setGifs={setGifs} />
+        <Trending setGifs={setGifs} />
+        <DropdownMenu setGifs={setGifs} />
+      </Row>
       <Row xs={1} md={2} lg={3}>
         {
           gifs.map((gif) => {
